@@ -1,6 +1,12 @@
 <template>
-  <header>OI BRUNNNNNO &#x1F693;</header>
-  <main>OI VINI</main>
+  <header>
+    <span> Home </span>
+    <span>|</span>
+    <span> Times </span>
+    <span>|</span>
+    <span>Jogadores</span>
+  </header>
+  <main>Bem vindo!</main>
   <footer>OI LARI</footer>
 </template>
 
@@ -16,20 +22,23 @@
   font-weight: normal;
 }
 header {
-  background-color: red;
-  color: rgb(219, 59, 219);
-  height: 33%;
+  background-color: lightcoral;
+  color: white;
+  height: 15%;
   font-size: 1.3rem;
 }
 footer {
-  background-color: blue;
+  background-color: lightblue;
   color: rgb(219, 59, 219);
-  height: 33%;
+  height: 15%;
   font-size: 1.3rem;
 }
 main {
-  height: 33%;
-  background-color:white;
+  height: 70%;
+  background-color: white;
   color: crimson;
+}
+header span {
+  padding: 0 20px;
 }
 </style>

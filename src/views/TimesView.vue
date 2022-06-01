@@ -6,6 +6,6 @@
     <span>|</span>
     <span>Jogadores</span>
   </header>
-  <main>Bem vindo!</main>
+  <main>Times</main>
   <footer>OI LARI</footer>
 </template>
