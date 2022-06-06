@@ -4,7 +4,9 @@ import RodapeComp from "./components/template/RodapeComp.vue";
 </script>
 <template>
   <HeaderComp />
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
   <RodapeComp />
 </template>
 
@@ -22,18 +24,18 @@ import RodapeComp from "./components/template/RodapeComp.vue";
 header {
   background-color: lightcoral;
   color: white;
-  height: 5%;
+  height: 15%;
   font-size: 1.3rem;
   display: flex;
 }
 footer {
-  background-color: lightblue;
+  background-color: lightskyblue;
   color: rgb(29, 29, 173);
   height: 5%;
   font-size: 1.3rem;
 }
 main {
-  height: 90%;
+  height: 80%;
   background-color: rgb(228, 186, 186);
   color: black;
 }
