@@ -14,11 +14,18 @@ export default {
   },
   methods: {
     salvar() {
-      const novo_id = uuid();
-      this.times.push({
-        id: novo_id,
-        name: this.novo_time,
-      });
+      if (this.novo_time !== "") {
+        const novo_id = uuid();
+        this.times.push({
+          id: novo_id,
+          name: this.novo_time,
+        });
+        this.novo_time = "";
+      }
+    },
+    excluir(time) {
+      const indice = this.times.indexOf(time);
+      this.times.splice(indice, 1);
     },
   },
 };
@@ -30,7 +37,12 @@ export default {
       <h2>Gerencimento de Times</h2>
     </div>
     <div class="form-input">
-      <input type="text" v-model="novo_time" placeholder="Times" />
+      <input
+        type="text"
+        v-model="novo_time"
+        @keyup.enter="salvar"
+        placeholder="Times"
+      />
       <button @click="salvar">Salvar</button>
     </div>
     <div class="list-items">
@@ -46,7 +58,10 @@ export default {
           <tr v-for="time in times" :key="time.id">
             <td>{{ time.id }}</td>
             <td>{{ time.name }}</td>
-            <td>???</td>
+            <td>
+              <button>Editar</button>
+              <button @click="excluir(time)">Apagar</button>
+            </td>
           </tr>
         </tbody>
       </table>
